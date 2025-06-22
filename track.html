@@ -1,0 +1,18 @@
+!DOCTYPE html>
+<html>
+<head>
+  <title>Track Location</title>
+</head>
+<body>
+  <h1>Loading...</h1>
+
+  <script>
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var lat = position.coords.latitude;
+      var lon = position.coords.longitude;
+      // Log ke Google Form (atau buka Google Maps terus)
+      window.location.href = "https://www.google.com/maps?q=" + lat + "," + lon;
+    });
+  </script>
+</body>
+</html>
